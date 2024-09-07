@@ -1,0 +1,155 @@
+
+.card-container {
+    perspective: 1000px;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s ease;
+}
+
+
+.card {
+    width: 350px;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(112, 109, 109, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.4),
+    -10px -10px 20px rgba(255, 255, 255, 0.1);
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 25px 25px 50px rgba(0, 0, 0, 0.5),
+    -15px -15px 25px rgba(159, 159, 159, 0.2);
+}
+
+
+.card-content {
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+    transform: translateZ(50px);
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.card p {
+    font-size: 18px;
+    color: #dcdcdc;
+}
+
+
+.title {
+    background-color: #DDD92A;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    align-items: center;
+    padding: 20px;
+    color: black;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    max-width: 70px;
+    min-height: 70px;
+    border-radius: 50%;
+    color: #DDD92A;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    background-clip: padding-box;
+    flex-basis: 25%;
+
+}
+
+
+.link--container {
+    display: flex;
+    padding: 30px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+
+.btn::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid rgb(221, 217, 42);
+    transition: all 0.4s ease;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 50%, 50% 0%, 0% 0%);
+}
+
+.btn:hover::before {
+    background-color: #DDD92A;
+    clip-path: circle(50%);
+    border-color: transparent;
+}
+
+
+.btn:hover {
+    color: black;
+    background-color: #DDD92A;
+}
+
+
+@media (max-width: 576px) {
+    .card {
+        width: 85%;
+        height: 90%;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .btn {
+        width: 60px;
+        height: 60px;
+    }
+
+    .link--container {
+        justify-content: space-between;
+    }
+}
+.vcard-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.vcard-btn:hover {
+    background-color: #45a049;
+}
