@@ -83,6 +83,7 @@ END:VCARD
                     </div>
 
                     <h3 className="title">Сложных проблем</h3>
+
                     <div className="vcard-button-container">
                         <button className="vcard-btn" onClick={saveVCard}>
                             vCard
